@@ -1,4 +1,8 @@
 <?php
-    echo $_POST['id'];
-    echo $_POST['pass'];
+    require "DAO.php";
+    $id = $_POST['id'];
+    $pass = $_POST['pass'];
+    $dao = new DAO;
+    $data = $dao->findUser($id,$pass);
+    echo $data['name'];
 ?>
