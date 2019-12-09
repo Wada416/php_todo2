@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>ログイン</h1>
-    <form method="post" action="login_logic">
+    <form method="post" action="login_logic.php">
         ID:<input type="text" name="id"/><br/>
         PASSWORD:<input type="password" name="pass"/><br/>
         <input type="submit" value="ログイン">
