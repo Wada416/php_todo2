@@ -18,6 +18,14 @@
             return $pdo;
         }
 
+        function select($sql){
+            $dbh = $this->pdo();
+            $stmt=$dbh->query($sql);
+            $items=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $items;
+        }
+        
+        
 
     }
 ?>
