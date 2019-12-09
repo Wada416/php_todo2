@@ -18,22 +18,16 @@
             return $pdo;
         }
 
-        function select($sql){
-            $dbh = $this->pdo();
-            $stmt = $dbh->query($sql);
-            $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $items;
-        }
-        
         function findUser($id,$pass){
-            $sql = 'SELECT * FROM user WHERE id=:id AND password=:pass';
+    
             $dbh = $this->pdo();
-            $stmt = $dbh->query($sql);
-            $stmt->execute(array(':id'=>$id,':ps'=>$pass));
+            $stmt = $dbh->prepare("SELECT * FROM user WHERE id = ? AND pass = ?");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindValue(1,$id);
+            $stmt->bindValue(2,$pass);
+            $stmt->execute();
             $data = $stmt->fetch();
             return $data;
         }
-        
-
     }
 ?>
