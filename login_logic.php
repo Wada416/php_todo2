@@ -5,4 +5,7 @@
     $dao = new DAO;
     $data = $dao->findUser($id,$pass);
     echo $data['name'];
+    if ($data == null){
+        echo "null";
+    }
 ?>
