@@ -1,10 +1,8 @@
 <?php
     require "DAO.php";
     session_start();
-    $id = $_POST['id'];
-    $pass = $_POST['pass'];
     $dao = new DAO;
-    $data = $dao->findUser($id,$pass);
+    $data = $dao->findUser($_POST['id'],$_POST['pass']);
     //echo $data['name'];
     if ($data == null){
         $_SESSION['msg'] = "ユーザーIDまたはパスワードが正しくありません";
