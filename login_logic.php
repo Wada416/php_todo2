@@ -5,6 +5,10 @@
     $data = $dao->findUser($_POST['id'],$_POST['pass']);
 
     if ($data != null){
+        $userList = $dao->getUserList();
+        $itemList = $dao->getItemList();
+        $_SESSION['userList'];
+        $_SESSION['itemList'];
         header('Location: http://localhost/php_todo2/index.php');
     }else{
         $_SESSION['msg'] = "ユーザーIDまたはパスワードが正しくありません";
