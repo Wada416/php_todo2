@@ -29,5 +29,14 @@
             $data = $stmt->fetch();
             return $data;
         }
+
+        function getUserList(){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("SELECT id ,name FROM user");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->execute();
+            $data = $stmt->fetchAll();
+            return $data;
+        }
     }
 ?>
