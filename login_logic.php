@@ -6,11 +6,12 @@
 
     if ($data != null){
         $userList = $dao->getUserList();
-        $itemList = $dao->getItemList();
+        //$itemList = $dao->getItemList();
         $_SESSION['userList'] = $userList;
-        $_SESSION['itemList'] = $itemList;
+        //$_SESSION['itemList'] = $itemList;
         $_SESSION['loginUser'] = $data['name'];
-        header('Location: http://localhost/php_todo2/index.php');
+        //header('Location: http://localhost/php_todo2/index.php');
+        print_r($userList);
     }else{
         $_SESSION['msg'] = "ユーザーIDまたはパスワードが正しくありません";
         header('Location: http://localhost/php_todo2/error.php');
