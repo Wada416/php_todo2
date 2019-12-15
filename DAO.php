@@ -38,5 +38,14 @@
             $data = $stmt->fetchAll();
             return $data;
         }
+
+        function getItemList(){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("SELECT * FROM item");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->execute();
+            $data = $stmt->fetchAll();
+            return $data;
+        }
     }
 ?>
