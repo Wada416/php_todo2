@@ -32,11 +32,20 @@ session_start();
         <th>終了日</th>
       </tr>
 
+      <?php foreach($_SESSION['itemList'] as $row){ ?>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <?php echo $row['name'] ?>
+        </td>
+        <td>
+          <?php echo $row['user'] ?>
+        </td>
+        <td>
+          <?php echo $row['start_date'] ?>
+        </td>
+        <td>
+          <?php echo $row['end_date'] ?>
+        </td>
         <td>
           <form action="">
             <input type="submit" value="完了" />
@@ -53,6 +62,7 @@ session_start();
           </form>
         </td>
       </tr>
+      <?php } ?>
 
     </table>
   </body>
