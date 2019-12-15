@@ -12,7 +12,9 @@ session_start();
   </head>
   <body>
     <h1>作業一覧</h1>
-    ユーザー名<br/>
+    <?php
+        echo $_SESSION['loginUser']."さんログイン中";
+    ?><br/>
     <form action="">
       <input type="submit" value="作業登録">
     </form>
