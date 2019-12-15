@@ -10,9 +10,7 @@
         $_SESSION['userList'] = $userList;
         $_SESSION['itemList'] = $itemList;
         $_SESSION['loginUser'] = $data['name'];
-        //header('Location: http://localhost/php_todo2/index.php');
-        print_r($userList);
-        print_r($itemList);
+        header('Location: http://localhost/php_todo2/index.php');
     }else{
         $_SESSION['msg'] = "ユーザーIDまたはパスワードが正しくありません";
         header('Location: http://localhost/php_todo2/error.php');
