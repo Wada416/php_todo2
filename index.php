@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -25,11 +29,12 @@
         <th>期限</th>
         <th>終了日</th>
       </tr>
+
       <tr>
-        <td>作業Ａ</td>
-        <td>佐藤</td>
-        <td>20200201</td>
-        <td>00000000</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>
           <form action="">
             <input type="submit" value="完了" />
@@ -43,27 +48,6 @@
         <td>
           <form action="">
             <input type="submit" value="登録" />
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <td>作業Ｂ</td>
-        <td>鈴木</td>
-        <td>20200301</td>
-        <td>00000000</td>
-        <td>
-          <form action="">
-            <input type="submit" value="完了" />
-          </form>
-        </td>
-        <td>
-          <form action="">
-            <input type="submit" value="更新" />
-          </form>
-        </td>
-        <td>
-          <form action="">
-            <input type="submit" value="削除" />
           </form>
         </td>
       </tr>
