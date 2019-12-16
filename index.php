@@ -15,7 +15,7 @@ session_start();
     <?php
         echo $_SESSION['loginUser']."さんログイン中";
     ?><br/>
-    <form action="">
+    <form method="get" action="regist.php">
       <input type="submit" value="作業登録">
     </form>
       <input type="text" name="work_name">
