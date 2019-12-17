@@ -10,18 +10,16 @@
 <body>
     <h1>登録</h1>
     <form method="post" action="regist_logic.php">
+        作業名称:
+        <input tyep="text" name="name">
+        <br/>
         担当者:
-        <select name="user_name">
+        <select name="user">
             <option value="aaa">aaa</option>
             <option value="aaa">bbb</option>
             <option value="aaa">ccc</option>
         </select>
         <br/>
-
-        作業名称:
-        <input tyep="text" name="item_name">
-        <br/>
-
         期限:
         <input type="text" name="deadline">
         <br/>
