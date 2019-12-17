@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="ja"">
+    <html lang="ja">
 <head>
     <meta charset="utf-8">
     <title>登録</title>
@@ -9,21 +9,21 @@
 
 <body>
     <h1>登録</h1>
-    <form action="">
+    <form method="post" action="regist_logic.php">
         担当者:
         <select name="user_name">
-            <option value="">aaa</option>
-            <option value="">bbb</option>
-            <option value="">ccc</option>
+            <option value="aaa">aaa</option>
+            <option value="aaa">bbb</option>
+            <option value="aaa">ccc</option>
         </select>
         <br/>
 
         作業名称:
-        <input tyep="text" name="work_name">
+        <input tyep="text" name="item_name">
         <br/>
 
         期限:
-        <input type="date" name="deadline">
+        <input type="text" name="deadline">
         <br/>
 
         <input type="submit" value="登録">
