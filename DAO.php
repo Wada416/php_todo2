@@ -47,5 +47,15 @@
             $data = $stmt->fetchAll();
             return $data;
         }
+
+        function registItem($item){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("INSERT INTO item (name, user, start_date, end_date ) VALUES (:name, :user, :deadline, :end_date)");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindParam(':name', $item['name'], PDO::PARAM_STR);
+            $stmt->bindParam(':user', $item['user'], PDO::PARAM_STR);
+            $stmt->bindParam(':deadline', $item['deadline'], PDO::PARAM_STR);
+            $stmt->bindParam(':end_date', $item['end_date'], PDO::PARAM_STR);
+        }
     }
 ?>
