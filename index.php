@@ -41,7 +41,7 @@ session_start();
           <?php echo $row['user'] ?>
         </td>
         <td>
-          <?php echo $row['start_date'] ?>
+          <?php echo $row['deadline'] ?>
         </td>
         <td>
           <?php echo $row['end_date'] ?>
