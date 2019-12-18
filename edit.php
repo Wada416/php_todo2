@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $item = $_POST['item'];
     $name = $item['name'];
     $user = $item['user'];
@@ -23,9 +24,9 @@
         担当者:
         <select name="user_name">
             <option value="" selected><?php echo $user; ?></option>
-            <option value="">aaa</option>
-            <option value="">bbb</option>
-            <option value="">ccc</option>
+            <?php foreach($_SESSION['userList'] as $userList){ ?>
+                <option value=""><?php echo $userList['name']; ?></option>
+            <?php } ?>
         </select>
         <br/>
         期限:
