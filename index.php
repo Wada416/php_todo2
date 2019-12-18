@@ -52,7 +52,10 @@ session_start();
           </form>
         </td>
         <td>
-          <form action="">
+          <form method="post" action="edit.php">
+          <input type="hidden" name="item[name]" value="<?php echo $row['name']; ?>">
+            <input type="hidden" name="item[user]" value="<?php echo $row['user']; ?>">
+            <input type="hidden" name="item[deadline]" value="<?php echo $row['deadline']; ?>">
             <input type="submit" value="更新" />
           </form>
         </td>
