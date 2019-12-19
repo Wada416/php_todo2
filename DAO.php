@@ -57,5 +57,20 @@
             $stmt->bindParam(':deadline', $item['deadline'], PDO::PARAM_STR);
             $stmt->execute();
         }
+
+        function updateItem($item){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("UPDATE item SET name = :name, user = :user, deadline = :deadline WHERE id = :id;");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindParam(':id', $item['id'], PDO::PARAM_INT);
+            $stmt->bindParam(':name', $item['name'], PDO::PARAM_STR);
+            $stmt->bindParam(':user', $item['user'], PDO::PARAM_STR);
+            $stmt->bindParam(':deadline', $item['deadline'], PDO::PARAM_STR);
+            $stmt->execute();
+        }
+
+/*         function updateItem($item){
+            $stmt = $dbh->prepare("UPDATE item SET name = 'testName', user = :user deadline = :deadline WHERE id = :id;");
+        } */
     }
 ?>
