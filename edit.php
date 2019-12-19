@@ -17,15 +17,15 @@
 
 <body>
     <h1>更新</h1>
-    <form action="">
+    <form method="post" action="edhit_logic.php">
         作業名称:
-        <input tyep="text" name="work_name" value="<?php echo $name; ?>">
+        <input tyep="text" name="name" value="<?php echo $name; ?>">
         <br/>
         担当者:
-        <select name="user_name">
-            <option value="" selected><?php echo $user; ?></option>
+        <select name="user">
+            <option value="<?php echo $user; ?>" selected><?php echo $user; ?></option>
             <?php foreach($_SESSION['userList'] as $userList){ ?>
-                <option value=""><?php echo $userList['name']; ?></option>
+                <option value="<?php echo $user; ?>"><?php echo $userList['name']; ?></option>
             <?php } ?>
         </select>
         <br/>
