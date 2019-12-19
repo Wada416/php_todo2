@@ -32,7 +32,7 @@
         期限:
         <input type="date" name="deadline" value="<?php echo $deadline; ?>">
         <br/>
-
+        <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
         <input type="submit" value="更新">
     </form>
 </body>
