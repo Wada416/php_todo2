@@ -17,7 +17,7 @@
 
 <body>
     <h1>更新</h1>
-    <form method="post" action="edhit_logic.php">
+    <form method="post" action="edit_logic.php">
         作業名称:
         <input tyep="text" name="name" value="<?php echo $name; ?>">
         <br/>
@@ -25,7 +25,7 @@
         <select name="user">
             <option value="<?php echo $user; ?>" selected><?php echo $user; ?></option>
             <?php foreach($_SESSION['userList'] as $userList){ ?>
-                <option value="<?php echo $user; ?>"><?php echo $userList['name']; ?></option>
+                <option value="<?php echo $userList['name']; ?>"><?php echo $userList['name']; ?></option>
             <?php } ?>
         </select>
         <br/>
