@@ -61,8 +61,12 @@ session_start();
           </form>
         </td>
         <td>
-          <form action="">
-            <input type="submit" value="登録" />
+          <form method="post" action="delete.php">
+            <input type="hidden" name="item[id]" value="<?php echo $row['id']; ?>">
+            <input type="hidden" name="item[name]" value="<?php echo $row['name']; ?>">
+            <input type="hidden" name="item[user]" value="<?php echo $row['user']; ?>">
+            <input type="hidden" name="item[deadline]" value="<?php echo $row['deadline']; ?>">
+            <input type="submit" value="削除 />
           </form>
         </td>
       </tr>
