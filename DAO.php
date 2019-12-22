@@ -69,8 +69,12 @@
             $stmt->execute();
         }
 
-/*         function updateItem($item){
-            $stmt = $dbh->prepare("UPDATE item SET name = 'testName', user = :user deadline = :deadline WHERE id = :id;");
-        } */
+        function deleteItem($id){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("DELETE FROM item WHERE id = :id;");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+        }
     }
 ?>
