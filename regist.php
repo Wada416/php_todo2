@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
     <html lang="ja">
 <head>
@@ -15,13 +19,13 @@
         <br/>
         担当者:
         <select name="user">
-            <option value="aaa">aaa</option>
-            <option value="aaa">bbb</option>
-            <option value="aaa">ccc</option>
+            <?php foreach($_SESSION['userList'] as $userList){ ?>
+                <option value="<?php echo $userList['name']; ?>"><?php echo $userList['name']; ?></option>
+            <?php } ?>
         </select>
         <br/>
         期限:
-        <input type="text" name="deadline">
+        <input type="date" name="deadline">
         <br/>
 
         <input type="submit" value="登録">
