@@ -40,7 +40,7 @@
         <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>">
     </form>
 
-    <form action="">
+    <form method="get" action="index.php">
             <input type="submit" value="キャンセル">
     </form>
 
