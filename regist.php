@@ -32,4 +32,8 @@
     </form>
 </body>
 
+<form method="get" action="index.php">
+            <input type="submit" value="キャンセル">
+</form>
+
 </html>
