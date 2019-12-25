@@ -35,6 +35,10 @@
         <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
         <input type="submit" value="更新">
     </form>
+    
+    <form method="get" action="index.php">
+            <input type="submit" value="キャンセル">
+    </form>
 </body>
 
 </html>
