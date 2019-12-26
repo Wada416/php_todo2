@@ -50,7 +50,7 @@
 
         function registItem($item){
             $dbh = $this->pdo();
-            $stmt = $dbh->prepare("INSERT INTO item (name, user, deadline) VALUES (:name, :user, :deadline)");
+            $stmt = $dbh->prepare("INSERT INTO item (name, user, deadline,end_date) VALUES (:name, :user, :deadline, '未完了')");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt->bindParam(':name', $item['name'], PDO::PARAM_STR);
             $stmt->bindParam(':user', $item['user'], PDO::PARAM_STR);
