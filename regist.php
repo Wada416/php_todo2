@@ -27,7 +27,7 @@
         期限:
         <input type="date" name="deadline">
         <br/>
-
+        
         <input type="submit" value="登録">
     </form>
 </body>
