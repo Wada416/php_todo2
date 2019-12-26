@@ -28,7 +28,6 @@
         <input type="date" name="deadline">
         <br/>
 
-        <input type="hidden" name="deadline" value="未完了">
         <input type="submit" value="登録">
     </form>
 </body>
