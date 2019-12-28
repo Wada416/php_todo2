@@ -18,10 +18,10 @@ session_start();
     <form method="get" action="regist.php">
       <input type="submit" value="作業登録">
     </form>
-      <input type="text" name="work_name">
-      <input type="submit" value="作業検索">
-    <form>
 
+    <form method="post" action="search_logic.php">
+      <input type="text" name="name">
+      <input type="submit" value="作業検索">
     </form>
     
     <table border="1">
