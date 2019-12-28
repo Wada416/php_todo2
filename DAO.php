@@ -76,5 +76,16 @@
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
         }
+
+        function searchItem($name){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("SELECT * FROM item WHERE name = :name;");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+            $stmt->execute();
+            $data = $stmt->fetchAll();
+            return $data;
+        }
+
     }
 ?>
