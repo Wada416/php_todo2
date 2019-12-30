@@ -47,8 +47,9 @@ session_start();
           <?php echo $row['end_date'] ?>
         </td>
         <td>
-          <form action="">
-            <input type="submit" value="完了" />
+          <form method="post" action="done_logic.php">
+            <input type="submit" value="完了">
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
           </form>
         </td>
         <td>
