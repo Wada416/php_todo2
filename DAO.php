@@ -87,5 +87,14 @@
             return $data;
         }
 
+        function doneItem($id,$end_date){
+            $dbh = $this->pdo();
+            $stmt = $dbh->prepare("UPDATE item SET end_date = :end_date WHERE id = :id;");
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':end_date', $end_date, PDO::PARAM_STR);
+            $stmt->execute();
+        }
+
     }
 ?>
